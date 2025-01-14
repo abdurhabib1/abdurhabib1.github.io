@@ -361,6 +361,11 @@
 	}
 
 	function reactionToEnemy() {
+		for (let coin of coins) {
+			coin.obj.setAttribute("scale", `${coin.originalWidth} ${coin.originalHeight} 		${coin.originalLength}`)
+			coin.collected = false
+ 	  }
+ 	  
 		text.setAttribute("value", "ouch!")
 		setTimeout(function(){
 			text.setAttribute("value", "")
